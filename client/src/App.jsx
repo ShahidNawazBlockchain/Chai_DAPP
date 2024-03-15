@@ -1,6 +1,7 @@
 import { useState,useEffect } from 'react'
 import {ethers} from "ethers"
-
+import add from "../constant/address";
+import abi from "../constant/abi"
 import './App.css'
 
 function App() {
@@ -12,18 +13,19 @@ function App() {
   const [account , setAccount]=useState("Not connected")
 useEffect(()=>{
   const template=async()=>{
-  const contractAddress="";
-  const contractABI="";
+  const contractAddress=add;
+  const contractABI=abi;
   try {
     const {ethereum} =window;
   const account=await ethereum.request({
     method:"eth_requestAccounts"
   })
   setAccount(account);
-  const provider= await ethers.providers.Web3Provider(ethereum);
+  const provider= new ethers.providers.Web3Provider(ethereum);
   const signer=provider.getSigner();
   const contract=new ethers.Contract(contractAddress,contractABI,signer)
   setState(signer,provider,contract);
+  console.log(contract)
   } catch (error) {
     alert(error)
   }

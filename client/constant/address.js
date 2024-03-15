@@ -1,0 +1,2 @@
+ const contractAddress="0x18f69637e911e8C6621ECF855c5967A9a843C7fd"
+ export default contractAddress;
