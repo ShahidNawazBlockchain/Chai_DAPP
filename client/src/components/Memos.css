@@ -1,0 +1,44 @@
+/* Memos.css */
+
+.memo-table {
+    font-family: Arial, sans-serif;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 20px 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .memo-table thead {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .memo-table th, .memo-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .memo-table tbody tr {
+    transition: background-color 0.3s ease;
+  }
+  
+  .memo-table tbody tr:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .memo-table td {
+    font-size: 14px;
+  }
+  
+  .memo-table th:first-child,
+  .memo-table td:first-child {
+    padding-left: 20px;
+  }
+  
+  .memo-table th:last-child,
+  .memo-table td:last-child {
+    padding-right: 20px;
+  }
+  
